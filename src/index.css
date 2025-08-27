@@ -1,20 +1,16 @@
+/* Prevent unexpected horizontal scroll */
+html, body { overflow-x: hidden; }
+
+/* Make media responsive by default */
+img, video, canvas, iframe { max-width: 100%; height: auto; }
+
 /* Minimal, safe global styles */
 html { scroll-behavior: smooth; }
 
-/* Dark mode: make cards match the page background */
+/* Dark mode card background matches page bg */
 :root[data-bs-theme="dark"] .card { --bs-card-bg: var(--bs-body-bg); }
 
-/* Utility spacing used on the hero */
+/* Hero spacing helper you already use */
 @media (min-width: 992px) {
-  .py-lg-6 { padding-top: 5rem !important; padding-bottom: 5rem !important; }
-}
-/* Minimal, safe global styles */
-html { scroll-behavior: smooth; }
-
-/* Dark mode: make cards match the page background */
-:root[data-bs-theme="dark"] .card { --bs-card-bg: var(--bs-body-bg); }
-
-/* Utility spacing used on the hero */
-@media (min-width: 992px) {
-  .py-lg-6 { padding-top: 5rem !important; padding-bottom: 5rem !important; }
+  .py-lg-6 { padding-block: 5rem !important; }
 }

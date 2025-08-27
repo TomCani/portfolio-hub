@@ -48,7 +48,7 @@ export default function SiteLayout() {
             <a className="link-body-emphasis" href="https://github.com/TomCani" target="_blank" rel="noreferrer">
               <i className="bi bi-github"></i> GitHub
             </a>
-            <a className="link-body-emphasis" href="thomascx5@gmail.com">
+            <a className="link-body-emphasis" href="mailto:thomascx5@gmail.com">
               <i className="bi bi-envelope"></i> Contact
             </a>
           </div>

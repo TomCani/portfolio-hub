@@ -40,7 +40,7 @@ export default function Navbar() {
                   "nav-link" + (isActive ? " active fw-semibold" : "")
                 }
               >
-                Home
+                Demo Home
               </NavLink>
             </li>
             <li className="nav-item">

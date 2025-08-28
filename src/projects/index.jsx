@@ -10,15 +10,24 @@ export const projects = [
     // lazily load the demo page
     element: React.lazy(() => import('./navbar/Demo.jsx')),
   },
-  // add more { slug, title, description, repo, element } here
+  {
+    slug: 'props-routing', // controls the URL: /projects/props-routing
+    title: 'React Props + Bootstrap + Routing',
+    description: 'Props patterns, Bootstrap UI, and client-side routing.',
+    repo: 'https://github.com/TomCani/react-props-bootstrap-routing',
+    // Local embedded demo with nested routes
+    element: React.lazy(() => import('./props-routing/Routes.jsx')),
+  },
 ]
 
 // Turn registry into Router routes
-export const projectRoutes = projects.map(p => ({
-  path: `/projects/${p.slug}`,
-  element: (
-    <React.Suspense fallback={<div className="container py-5">Loading…</div>}>
-      <p.element />
-    </React.Suspense>
-  ),
+export const projectRoutes = projects
+  .filter(p => p.element)
+  .map(p => ({
+    path: `/projects/${p.slug}/*`,
+    element: (
+      <React.Suspense fallback={<div className="container py-5">Loading…</div>}>
+        <p.element />
+      </React.Suspense>
+    ),
 }))

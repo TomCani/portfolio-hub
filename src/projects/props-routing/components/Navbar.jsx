@@ -1,5 +1,7 @@
 import { NavLink, Link } from "react-router-dom";
 
+const BASE = "/projects/props-routing"; // <-- anchor all links to this
+
 export default function Navbar() {
   function toggleTheme() {
     const current = document.documentElement.getAttribute("data-bs-theme");
@@ -11,8 +13,8 @@ export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary border-bottom">
       <div className="container">
-        {/* IMPORTANT: use a RELATIVE link so it stays under /projects/props-routing */}
-        <Link className="navbar-brand fw-bold" to=".">
+        {/* Always go to the project's home, not the site root */}
+        <Link className="navbar-brand fw-bold" to={BASE}>
           Props + Bootstrap
         </Link>
 
@@ -31,27 +33,28 @@ export default function Navbar() {
         <div className="collapse navbar-collapse" id="mainNav">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              {/* RELATIVE route; 'end' so it’s active only on the index */}
               <NavLink
+                to={BASE}
                 end
-                to=".."
-                className={({ isActive }) => "nav-link" + (isActive ? " active fw-semibold" : "")}
+                className={({ isActive }) =>
+                  "nav-link" + (isActive ? " active fw-semibold" : "")
+                }
               >
-                Demo Home
+                Home
               </NavLink>
             </li>
             <li className="nav-item">
-              {/* RELATIVE route to nested page */}
               <NavLink
-                to="profiles"
-                className={({ isActive }) => "nav-link" + (isActive ? " active fw-semibold" : "")}
+                to={`${BASE}/profiles`}
+                className={({ isActive }) =>
+                  "nav-link" + (isActive ? " active fw-semibold" : "")
+                }
               >
                 Profiles
               </NavLink>
             </li>
           </ul>
 
-          {/* Dark mode toggle */}
           <button
             onClick={toggleTheme}
             className="btn btn-outline-secondary ms-lg-3"

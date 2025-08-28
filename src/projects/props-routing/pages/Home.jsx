@@ -17,7 +17,7 @@ export default function Home() {
             Head to the Profiles page to see multiple cards rendered from the same
             component with different props.
           </p>
-          <Link to="profiles" className="btn btn-primary">See Profiles</Link>
+          <Link to="/projects/props-routing/profiles" className="btn btn-primary">See Profiles</Link>
         </div>
       </div>
     </div>

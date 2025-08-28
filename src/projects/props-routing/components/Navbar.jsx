@@ -34,10 +34,10 @@ export default function Navbar() {
               {/* RELATIVE route; 'end' so it’s active only on the index */}
               <NavLink
                 end
-                to="."
+                to=".."
                 className={({ isActive }) => "nav-link" + (isActive ? " active fw-semibold" : "")}
               >
-                Home
+                Demo Home
               </NavLink>
             </li>
             <li className="nav-item">

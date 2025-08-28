@@ -1,5 +1,11 @@
 {
   "rewrites": [
+    { "source": "/projects/navbar/(.*)", "destination": "https://react-navbar-layout-kit.vercel.app/$1" },
+    { "source": "/projects/navbar", "destination": "https://react-navbar-layout-kit.vercel.app/" },
+
+    { "source": "/projects/props-routing/(.*)", "destination": "https://react-props-bootstrap-routing.vercel.app/$1" },
+    { "source": "/projects/props-routing", "destination": "https://react-props-bootstrap-routing.vercel.app/" },
+
     { "source": "/(.*)", "destination": "/" }
   ]
 }

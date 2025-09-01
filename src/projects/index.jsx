@@ -18,6 +18,13 @@ export const projects = [
     // Local embedded demo with nested routes
     element: React.lazy(() => import('./props-routing/Routes.jsx')),
   },
+  {
+    slug: 'data-table',
+    title: 'Sortable/Filterable Data Table',
+    description: 'Fetch public JSON (users/todos); client-side sort, filter, pagination.',
+    repo: 'https://github.com/TomCani/react-data-table', // adjust if different
+    element: React.lazy(() => import('./data-table/Routes.jsx')),
+  },
 ]
 
 // Turn registry into Router routes

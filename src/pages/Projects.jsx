@@ -11,11 +11,16 @@ export default function Projects() {
             <div className="card h-100">
               <div className="card-body">
                 <h5 className="card-title">{p.title}</h5>
-                <p className="text-body small mb-3">{p.description}</p>
+                <p className="text-body-secondary small mb-3">{p.description}</p>
                 <div className="d-flex gap-2">
                   <Link className="btn btn-sm btn-primary" to={`/projects/${p.slug}`}>Open</Link>
                   {p.repo && (
-                    <a className="btn btn-sm btn-outline-dark" href={p.repo} target="_blank" rel="noreferrer">
+                    <a
+                      className="btn btn-sm btn-outline-primary"   // ← was btn-outline-dark
+                      href={p.repo}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       Code
                     </a>
                   )}

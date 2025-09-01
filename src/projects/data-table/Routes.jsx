@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Layout from "./layout/Layout.jsx";
 import Home from "./pages/Home.jsx";
 import UsersTable from "./pages/UsersTable.jsx";
-import TodosTable from "./pages/Todostable";
+import TodosTable from "./pages/TodosTable.jsx";
 
 export default function ProjectRoutes() {
   return (

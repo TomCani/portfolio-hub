@@ -20,6 +20,7 @@ const router = createBrowserRouter([
       { path: '/projects', element: <Projects /> },
       { path: '/resume', element: <Resume /> },
       ...projectRoutes, // e.g. /projects/navbar
+      { path: '*', element: <NotFound /> },
     ],
   },
 ])

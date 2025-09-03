@@ -23,7 +23,7 @@ export default function Home() {
                 <Link to="/projects" className="btn btn-primary btn-lg">
                   Explore Projects
                 </Link>
-                <Link to="/resume" className="btn btn-outline-secondary btn-lg">
+                <Link to="/resume" className="btn btn-outline-primary btn-lg">
                   View Resume
                 </Link>
               </div>

@@ -2,11 +2,13 @@ import { Link } from 'react-router-dom'
 import { projects } from '../projects'
 
 export default function Projects() {
+  const items = [...projects].reverse();
+
   return (
     <main className="container py-5">
       <h1 className="fw-bold mb-4">Projects</h1>
       <div className="row g-3">
-        {projects.map(p => (
+        {items.map(p => (
           <div key={p.slug} className="col-md-6 col-lg-4">
             <div className="card h-100">
               <div className="card-body">
@@ -16,7 +18,7 @@ export default function Projects() {
                   <Link className="btn btn-sm btn-primary" to={`/projects/${p.slug}`}>Open</Link>
                   {p.repo && (
                     <a
-                      className="btn btn-sm btn-outline-primary"   // ← was btn-outline-dark
+                      className="btn btn-sm btn-outline-primary"
                       href={p.repo}
                       target="_blank"
                       rel="noreferrer"

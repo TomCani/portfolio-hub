@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { projects } from '../projects'
 
 export default function Home() {
-  const featured = projects.slice(0, 3) // pick top 3 for the hero section
+  const featured = [...projects].reverse().slice(0, 6) // pick top 3 for the hero section
 
   return (
     <>
@@ -58,7 +58,7 @@ export default function Home() {
                   <p className="text-body small mb-3">{p.description}</p>
                   <div className="mt-auto d-flex gap-2">
                     <Link className="btn btn-sm btn-primary" to={`/projects/${p.slug}`}>Open</Link>
-                    {p.repo && <a className="btn btn-sm btn-outline-dark" href={p.repo} target="_blank" rel="noreferrer">Code</a>}
+                    {p.repo && <a className="btn btn-sm btn-outline-primary" href={p.repo} target="_blank" rel="noreferrer">Code</a>}
                   </div>
                 </div>
               </div>

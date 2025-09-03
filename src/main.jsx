@@ -10,7 +10,7 @@ import SiteLayout from './layouts/SiteLayout.jsx'
 import Home from './pages/Home.jsx'
 import Projects from './pages/Projects.jsx'
 import Resume from './pages/Resume.jsx'
-import { projectRoutes } from './projects'  // extensionless import (your file is .jsx)
+import { projectRoutes } from './projects'
 
 const router = createBrowserRouter([
   {

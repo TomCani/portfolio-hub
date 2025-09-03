@@ -1,0 +1,100 @@
+/* Masonry columns */
+.masonry-scope .masonry {
+  column-gap: 1rem;
+  /* Responsive column counts */
+  column-count: 1;
+}
+@media (min-width: 576px) { .masonry-scope .masonry { column-count: 2; } }
+@media (min-width: 992px) { .masonry-scope .masonry { column-count: 3; } }
+@media (min-width: 1400px){ .masonry-scope .masonry { column-count: 4; } }
+
+/* Each item must avoid breaking across columns */
+.masonry-scope .masonry-item {
+  break-inside: avoid;
+  margin-bottom: 1rem;
+}
+
+/* Ensure images fill the column width */
+.masonry-scope .masonry-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Image skeleton placeholder */
+.masonry-scope .img-skeleton {
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(108,117,125,0.1),
+    rgba(108,117,125,0.1) 10px,
+    rgba(108,117,125,0.2) 10px,
+    rgba(108,117,125,0.2) 20px
+  );
+  border-radius: .5rem;
+}
+
+/* Lightbox overlay */
+.lightbox-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.7);
+  display: grid;
+  place-items: center;
+  z-index: 1060; /* Above Bootstrap navbar */
+}
+
+/* Lightbox dialog */
+.lightbox-dialog {
+  max-width: min(92vw, 1200px);
+  max-height: 92vh;
+  width: 100%;
+  border-radius: .75rem;
+  overflow: hidden;
+  background: var(--bs-body-bg);
+  color: var(--bs-body-color);
+  box-shadow: 0 2rem 3rem rgba(0,0,0,.5);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Lightbox header/footer spacing */
+.lightbox-header,
+.lightbox-footer {
+  padding: .75rem 1rem;
+  border-bottom: 1px solid var(--bs-border-color);
+}
+.lightbox-footer {
+  border-top: 1px solid var(--bs-border-color);
+  border-bottom: 0;
+}
+
+/* Lightbox content area */
+.lightbox-body {
+  padding: .5rem;
+  overflow: auto;
+  display: grid;
+  place-items: center;
+}
+
+/* Image in lightbox */
+.lightbox-img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Simple focus outline for keyboard users (global is fine) */
+:focus-visible {
+  outline: 3px solid rgba(13,110,253,.6);
+  outline-offset: 2px;
+}
+
+/* Dark mode fine-tuning (honors Bootstrap variables) */
+[data-bs-theme="dark"] .img-skeleton {
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(255,255,255,0.06),
+    rgba(255,255,255,0.06) 10px,
+    rgba(255,255,255,0.12) 10px,
+    rgba(255,255,255,0.12) 20px
+  );
+}

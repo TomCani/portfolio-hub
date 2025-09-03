@@ -7,7 +7,6 @@ export const projects = [
     title: 'React Navbar Layout Kit',
     description: 'Bootstrap 5 offcanvas nav, theme toggle, and layout examples.',
     repo: 'https://github.com/TomCani/react-navbar-layout-kit',
-    // lazily load the demo page
     element: React.lazy(() => import('./navbar/Demo.jsx')),
   },
   {
@@ -15,15 +14,21 @@ export const projects = [
     title: 'React Props + Bootstrap + Routing',
     description: 'Props patterns, Bootstrap UI, and client-side routing.',
     repo: 'https://github.com/TomCani/react-props-bootstrap-routing',
-    // Local embedded demo with nested routes
     element: React.lazy(() => import('./props-routing/Routes.jsx')),
   },
   {
     slug: 'data-table',
     title: 'Sortable/Filterable Data Table',
     description: 'Fetch public JSON (users/todos); client-side sort, filter, pagination.',
-    repo: 'https://github.com/TomCani/react-data-table', // adjust if different
+    repo: 'https://github.com/TomCani/react-data-table', 
     element: React.lazy(() => import('./data-table/Routes.jsx')),
+  },
+  {
+    slug: 'masonry-gallery',
+    title: 'Masonry Lightbox Gallery',
+    description: 'Responsive masonry grid with lazy-loaded images and a lightbox.',
+    repo: 'https://github.com/TomCani/react-masonry-lightbox-gallery',
+    element: React.lazy(() => import('./masonry-gallery/Routes.jsx')),
   },
 ]
 

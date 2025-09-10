@@ -30,6 +30,13 @@ export const projects = [
     repo: 'https://github.com/TomCani/react-masonry-lightbox-gallery',
     element: React.lazy(() => import('./masonry-gallery/Routes.jsx')),
   },
+  {
+    slug: 'kanban-dnd',
+    title: 'Kanban (dnd-kit + localStorage)',
+    description: 'Drag-and-drop columns/cards with persistence in localStorage.',
+    repo: 'https://github.com/TomCani/kanban-dndkit-localstorage',
+    element: React.lazy(() => import('./kanban-dnd/Routes.tsx')),
+  },
 ]
 
 // Turn registry into Router routes

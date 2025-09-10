@@ -1,0 +1,57 @@
+/* Minor layout polish; rely on Bootstrap for most styles */
+:root {
+  --kanban-col-width: 320px;
+}
+
+body {
+  min-height: 100vh;
+}
+
+/* Columns container */
+.kanban-wrap {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: var(--kanban-col-width);
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+
+/* Column cards */
+.kanban-col {
+  border-radius: 0.75rem;
+  border: 1px solid var(--bs-border-color);
+  background: var(--bs-body-bg);
+  min-height: 280px;
+}
+
+.kanban-col-header {
+  padding: .75rem 1rem;
+  font-weight: 600;
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
+.kanban-col-body {
+  padding: .75rem;
+}
+
+/* Card drag styles */
+.card-draggable {
+  user-select: none;
+  border: 1px solid var(--bs-border-color);
+  background: var(--bs-tertiary-bg);
+}
+.card-draggable.dragging {
+  opacity: 0.75;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15);
+}
+
+/* Column drag styles */
+.column-draggable.dragging {
+  outline: 2px dashed var(--bs-primary);
+}
+
+/* Dark theme: handled by Bootstrap tokens (data-bs-theme='dark').
+   If you need custom tweaks, scope them like:
+[data-bs-theme='dark'] .kanban-col { background: var(--bs-body-bg); }
+*/

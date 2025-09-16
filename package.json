@@ -1,7 +1,7 @@
 {
   "name": "portfolio-hub",
   "private": true,
-  "version": "0.4.0",
+  "version": "1.4.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -15,6 +15,7 @@
     "@dnd-kit/sortable": "^10.0.0",
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.7",
+    "clsx": "^2.1.1",
     "react": "^19.1.1",
     "react-bootstrap": "^2.10.10",
     "react-dom": "^19.1.1",

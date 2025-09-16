@@ -37,6 +37,13 @@ export const projects = [
     repo: 'https://github.com/TomCani/kanban-dndkit-localstorage',
     element: React.lazy(() => import('./kanban-dnd/Routes.tsx')),
   },
+  {
+    slug: 'pricing-plans',
+    title: 'Pricing Plans Toggle',
+    description: 'Monthly/Yearly toggle, plan cards, and feature table.',
+    repo: 'https://github.com/TomCani/pricing-plans-toggle', // update if different
+    element: React.lazy(() => import('./pricing-plans/Routes.tsx')),
+  },
 ]
 
 // Turn registry into Router routes

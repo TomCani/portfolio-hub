@@ -1,0 +1,67 @@
+/* A scoped theme shell so we don't depend on the host page setup */
+.pricing-theme {
+  /* Light defaults */
+  --bg: #ffffff;
+  --fg: #0b1220;
+  --muted: #6c757d;
+  --card: #f8f9fa;
+  --border: #dee2e6;
+
+  /* Map to Bootstrap tokens so components auto-adapt */
+  --bs-body-bg: var(--bg);
+  --bs-body-color: var(--fg);
+  --bs-border-color: var(--border);
+  --bs-card-bg: var(--card);
+  --bs-card-color: var(--fg);
+  --bs-heading-color: var(--fg);
+  --bs-table-bg: var(--card);
+  --bs-table-color: var(--fg);
+  --bs-table-border-color: var(--border);
+  --bs-link-color: #0d6efd;
+  --bs-link-hover-color: #0a58ca;
+
+  background: var(--bg);
+  color: var(--fg);
+}
+
+/* Dark mode if the shell has data-theme="dark"
+   OR the host adds .dark anywhere above
+   OR the host adds [data-theme="dark"] above  */
+.pricing-theme[data-theme='dark'],
+.dark .pricing-theme,
+[data-theme='dark'] .pricing-theme {
+  --bg: #0b1220;
+  --fg: #f1f5f9;
+  --muted: #97a0ad;
+  --card: #121a2b;
+  --border: #1f2a44;
+
+  --bs-body-bg: var(--bg);
+  --bs-body-color: var(--fg);
+  --bs-border-color: var(--border);
+  --bs-card-bg: var(--card);
+  --bs-card-color: var(--fg);
+  --bs-heading-color: var(--fg);
+  --bs-table-bg: var(--card);
+  --bs-table-color: var(--fg);
+  --bs-table-border-color: var(--border);
+  --bs-link-color: #66b0ff;
+  --bs-link-hover-color: #a8d1ff;
+}
+
+/* Ensure Bootstrap pieces render with our tokens inside the shell */
+.pricing-theme .card,
+.pricing-theme .table {
+  background-color: var(--bs-card-bg);
+  color: var(--bs-card-color);
+}
+.pricing-theme .table thead th,
+.pricing-theme .table td,
+.pricing-theme .table th {
+  border-color: var(--bs-table-border-color);
+}
+
+/* Minor helpers */
+.badge.bg-soft { background-color: rgba(13,110,253,0.12); color: #0d6efd; }
+.btn-outline-light { color: var(--fg); border-color: var(--border); }
+.btn-outline-light:hover { background: var(--border); }
